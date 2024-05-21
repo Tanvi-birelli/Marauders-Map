@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: "hp font";
+    src: url(HARRYP__.TTF);
+}
+body{
+    background: url('map.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    font-family: "hp font", sans-serif;
+    color: #410E1A;
+}
+.correct-answer{
+    background :url('mapInside.jpg') no-repeat center/ cover;
+}
+#spell-container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    top:8%;
+    right: 2%;
+    animation-name: slideIn;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+}
+#ask-spell{
+    font-size:2.5rem;
+}
+#type{
+    font-size:1.4rem;
+}
+#spell{
+    background-color: #5c282fd0;
+    color: #E4D3A0;
+    width:250px;
+    height: 30px;
+    border: solid 2px #2A1205;
+    padding: 10px;
+    font-size: 1rem;
+}
+#reply-container{
+    background-color: rgba(202, 156, 87, 0.777);
+    width: 300px;
+    height:100px;
+    position: absolute;
+    box-shadow: 0 0 10px;
+    top: 8%;
+    right:2%;
+    display: none;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+#reply{
+    position: absolute;
+    top: 40%;
+    left:10%;
+    font-size: 1.8rem;
+}
+@keyframes slideIn {
+    0%{
+        top: -200px;
+    }
+    90%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
